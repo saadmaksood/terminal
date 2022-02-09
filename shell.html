@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<style>
+.terminal {
+  --color: rgba(5, 202, 5, 0.99);
+  --background: rgb(0, 0, 0);
+  --size:1.2;
+}
+
+</style>
+<body>
+    <script>
+        $('body').terminal({
+            me : function(what) {
+                this.echo('Hello, ' + what +
+                          '. Welcome to this terminal.');
+            },
+            cat: function(width, height) {
+        const img = $('<img src="https://placekitten.com/' +
+                      width + '/' + height + '">');
+        this.echo(img);
+    },
+
+        website: function() {this.echo('Learn about Termux From Beginner level to pro🔥.\n[[!;;;;https://learntermux.tech]LearnTermux.tech]');},
+        social: function() {this.echo('\nInstagram : [[!;;;;https://instagram.com/skhan_official]skhan_official]\nGithub : [[!;;;;https://github.com/khansaad1275]skhan_official]\nSnapchat : [[!;;;;https://www.snapchat.com/add/skhan_official]skhan_official]\n');},
+
+
+         // create commands     
+        chane: function() {this.echo("hey");},                    
+
+            
+
+        help: function() {this.echo("\n me {yourname} - prints hello message \n cat {widht} {height} - shows you a cat picture\n clear - clean the terminal\n website - give you info about my website\n social - list all my social media link\n");},
+
+        },
+         {
+            //  this will show on top of terminal
+            greetings: "$aad' Shell [Version 1.0.2021.0901] \n(c) SAAD MAQSOOD. All rights reserved.\n\nYou can type 'help' to get all the commands"
+        });
+        </script>
+</body>
+</html>
